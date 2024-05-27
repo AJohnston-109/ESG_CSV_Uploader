@@ -15,6 +15,7 @@ using System.Reflection;
 using System.Data.SqlClient;
 using Microsoft.Data.SqlClient;
 using ESGCsvUploader.Models;
+using System.Configuration;
 
 namespace ESGCsvUploader
 {
@@ -30,21 +31,13 @@ namespace ESGCsvUploader
         }
         static void Main(string[] args)
         {
-            //var builder = new ConfigurationBuilder().AddJsonFile("config.json", false, false);
-            //IConfiguration config = builder.Build();
-            //var connectionString = config.GetSection("connectionString");
-            //Console.WriteLine($"connectionString");
-            //Directory.GetCurrentDirectory()
-            //System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;
             string ConnectionString = "Data Source=localhost;Initial Catalog=ESG_AJ;TrustServerCertificate=True;Integrated Security=True;";
-            //SqlConnection myConn = new SqlConnection(ConnectionString);
+            SqlConnection myConn = new SqlConnection(ConnectionString);
             //myConn.Open();
             bool hasHeader = true;
             int rowCounter = 0;
             string ExeDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string CsvDirectory = Path.Combine(ExeDirectory, @"CSV Files");
-            
-            //using HttpClient client = new();
             
                 string folder = CsvDirectory;
                 //@"C:\Temp\Excel to CSV\CSV for Upload";
