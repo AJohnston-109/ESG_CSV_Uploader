@@ -1,0 +1,14 @@
+{
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ],
+  "AllowedHosts": "*",
+  "connectionString": {
+    "defaultConnection": "Data Source=localhost;Initial Catalog=ESG_AJ;Integrated Security=True;MultipleActiveResultSets=True"
+  }
+  }
